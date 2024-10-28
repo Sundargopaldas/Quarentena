@@ -1,0 +1,273 @@
+*{
+
+box-sizing: border-box;
+padding: 0;
+text-decoration: none;
+}
+body{
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  }
+  ul{
+  list-style: none;
+  }
+  body{
+  background-image: url(./img/encontros.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  
+  }
+.navbar{
+  transition: .3s;
+}
+.logo-whatsapp img{
+width: 10%;
+cursor: pointer;
+}
+
+
+.google-meet img{
+  width: 12%;
+  cursor: pointer;
+}
+
+.list-group a{
+color: black;
+font-weight: bold;
+font-size: 15px;
+}
+
+#artigos{
+  height: 100%;
+}
+.text-artico{
+  
+color: white;
+font-size: 18px;
+font-weight: bold;
+}
+.logo{
+  width: 150px;
+  margin-top: -700px;
+  margin-left: 900px;
+  position: absolute;
+}
+.frase-guru{
+  color: white;
+  width: 500px;
+  margin-left: 720px;
+  margin-top: -500px;
+  font-size: 17px;
+  position: absolute;
+}
+.nome-guru{
+  margin-left: 100px;
+  font-weight: bold;
+}
+
+.titulo-quarentena{
+  color: white;
+  position: absolute;
+  margin-top: -300px;
+  margin-left: 255px;
+  font-size: 40px;
+  font-family: 'IM Fell Double Pica SC', serif;
+  font-weight: bolder;
+}
+.btn{
+  width: 280px;
+}
+.sidebar{
+  background-color: rgb(44, 28, 75);
+  align-items: flex-start;
+  
+}
+
+.nav-link{
+padding: 5px;
+border-radius: 5px;
+
+}
+.nav-link:hover{
+background-color: blue;
+border: none;
+}
+
+.trivikrama-img{
+  width: 300px;
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 14px;
+}
+
+  @media (max-width:1024px){
+
+  
+    .navbar a{
+      font-size: 11px;
+      padding: 10px;
+    }
+   .frase-guru{
+    margin-left: 400px;
+    margin-top: -290px;
+   } 
+   .titulo-quarentena{
+    margin-top: -180px;
+    margin-left: 140px;
+   }
+   .logo{
+    margin-left: 580px;
+    margin-top: -500px;
+    width: 140px;
+
+   }
+  .trivikrama-img{
+  width: 200px;
+  margin-left: 40px;
+  margin-top: 20px;
+} 
+  }
+  
+@media(max-width:820px){ 
+
+  .navbar a {
+    font-size: 18px;
+    
+  }
+  .sidebar{
+    background-color: black;
+    border: 2px solid white;
+  }
+.titulo-quarentena{
+     
+  margin-top: -90px;
+  margin-left: 70px;
+}
+.frase-guru{
+  margin-left: 400px;
+  margin-top: -250px;
+  width: 350px;
+}
+.logo{
+  margin-left: 500px;
+  margin-top: -370px;
+  width: 100px;
+  
+}
+.trivikrama-img{
+  width: 200px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+}
+@media (max-width:768px) {
+ .navbar a{
+  font-size: 18px;
+ }
+ .sidebar{
+  background-color: black;
+ }
+ 
+ 
+.titulo-quarentena{
+  position: absolute;
+  margin-left: 80px;
+  margin-top:-120px ;
+}
+.frase-guru{
+  margin-left: 340px;
+  margin-top: -295px;
+  width: 395px;
+}
+.logo{
+  margin-left: 490px;
+  margin-top: -400px;
+  width: 90px;
+
+}
+.trivikrama-img{
+  width: 160px;
+  margin-top: 40px;
+  margin-left: 20px;
+  position: absolute;
+}
+}
+
+@media (max-width: 450px) {
+
+.img-home img{
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+    
+}
+.navbar a{
+  font-size: 14px;
+}
+
+  .trivikrama-img{
+    width: 95px;
+    margin-left: 30px;
+    margin-top: 15px;  
+  }
+.titulo-quarentena{
+  color: white;
+  position: absolute;
+  margin-top: 48px;
+  margin-left: 80px;
+  font-size: 25px;
+
+}
+
+.frase-guru{
+  color: rgb(246, 242, 242);
+  width: 320px;
+  margin-left: 17px;
+  margin-top: -255px;
+  font-size: 16px;
+  position: absolute;
+}
+.nome-guru{
+margin-left: 40px;
+font-weight: bold;
+margin-top: -40px;
+
+}
+  
+ .sidebar{
+ background-color: rgb(11, 11, 11);
+align-items: flex-start; 
+border: 2px solid white; 
+
+   
+}
+.logo{
+  margin-top: -350px;
+  margin-left: 146px;
+}
+
+.nav-link{
+  padding: 5px;
+  border-radius: 5px;
+
+}
+.nav-link:hover{
+  background-color: blue;
+  border: none;
+}
+.titulo h2{
+  font-size: 7px;
+}
+.offcanvas-body{
+  width: 300px;
+  height: 40px;
+}
+
+}
+  
+  
