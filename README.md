@@ -1,43 +1,47 @@
-# 🦠 QUARENTENA
+# 🕉️ Quarentena da Devoção
 
-Este repositório foi criado durante o período da quarentena, representando um marco importante na história global da pandemia de COVID-19.
+Bem-vindo ao repositório da Quarentena da Devoção, um espaço dedicado aos seguidores e simpatizantes da consciência de Krishna, conectados à escola Sri Chaitanya Saraswath Math (SCSMath).
 
-## 📝 Sobre o Projeto
+## 📖 Sobre Nós
 
-Este é um espaço dedicado a documentar experiências, aprendizados e projetos desenvolvidos durante o período de isolamento social.
+Somos um grupo de amigos e amigas que compartilham os ensinamentos de nossos mestres sobre as escrituras Védicas. Este projeto foi criado para buscadores interessados no estudo e na prática espiritual.
 
-## 🎯 Objetivo
+## 🌟 Nossos Encontros
 
-O objetivo deste repositório é:
-- Registrar atividades realizadas durante a quarentena
-- Compartilhar conhecimentos adquiridos
-- Manter um histórico deste período único
+- **Horário**: Sábados, das 10h às 11:30 (horário de Brasília)
+- **Atividades**: 
+  - Canto de mantras (orações)
+  - Estudo da literatura védica
+  - Conversas e trocas de experiências
 
-## 💻 Tecnologias 
+## 📚 Conteúdo do Site
 
-- HTML
-- CSS
-- JavaScript
+- Acolhimento para novos participantes
+- Manual de Boas-Vindas
+- Devocionais
+- Livros recomendados
+- Vídeos inspiradores
+- Histórias devocionais
+- Artigos sobre consciência de Krishna
 
-## 📚 Conteúdo
+## 💭 Citação dos Mestres
 
-O repositório contém diversos materiais e recursos relacionados ao período da quarentena, incluindo:
-- Documentações
-- Códigos
-- Recursos educacionais
-- Projetos pessoais
+> "O que nós precisamos é bons amigos e boa associação. Então, nós poderemos prosseguir felizmente nosso caminho. Se nossa rendição for perfeita, então, de um nível mais elevado, a fé virá para nós e nos protegerá."
+> 
+> — B.S. Govinda Maharaj
 
-## 🤝 Contribuição
+## 🤝 Participação
 
-Sinta-se à vontade para contribuir com este repositório através de:
-- Issues
-- Pull Requests
-- Sugestões de melhorias
+- Não é necessário ser iniciado para participar dos encontros
+- Todos os interessados são bem-vindos
+- Ambiente acolhedor e favorável para troca de experiências
 
-## 📫 Contato
+## 📞 Contato
 
-Para mais informações ou dúvidas, entre em contato através do GitHub.
+Para participar ou saber mais informações:
+- Acesse nosso site: [quarentenadadevocao.com](https://quarentenadadevocao.com)
+- Entre em contato através do WhatsApp disponível no site
 
-## 📄 Licença
+## 🙏 Nossa Missão
 
-Este projeto está sob a licença MIT.
+Criar um ambiente auspicioso para o desenvolvimento espiritual através do estudo das escrituras védicas e da associação com devotos.
