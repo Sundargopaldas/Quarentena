@@ -43,6 +43,30 @@ document.addEventListener('DOMContentLoaded', function() {
         once: true
     });
 
+    // Video Modal Logic
+    const videoModal = document.getElementById('videoModal');
+    if (videoModal) {
+        videoModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            const button = event.relatedTarget;
+            // Extract info from data-* attributes
+            const videoId = button.getAttribute('data-video-id');
+            const videoTitle = button.getAttribute('data-video-title');
+            
+            // Update the modal's content.
+            const modalTitle = videoModal.querySelector('.modal-title');
+            const modalIframe = videoModal.querySelector('iframe');
+            
+            modalTitle.textContent = videoTitle;
+            modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        });
+
+        videoModal.addEventListener('hide.bs.modal', function (event) {
+            const modalIframe = videoModal.querySelector('iframe');
+            modalIframe.src = ''; // Stop video
+        });
+    }
+
     // Start Typewriter
     const titulo = document.querySelector('.frase1');
     const guru = document.querySelector('.nome-guru');
@@ -124,4 +148,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
 });
