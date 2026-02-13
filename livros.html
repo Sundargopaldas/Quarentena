@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livros - QuarentenaDaDevoção</title>
+  <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #212529;
+      color: white;
+    }
+
+    .book-card {
+      transition: transform 0.3s ease;
+      margin-bottom: 30px;
+      height: 100%;
+    }
+
+    .book-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .book-cover {
+      height: 300px;
+      object-fit: cover;
+      background-color: #0d6efd;
+    }
+
+    .book-title {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .book-author {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .book-description {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      margin-right: 5px;
+    }
+
+    .books-title {
+      margin-top: 130px;
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .pdf-size {
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+    .btn-livros{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: #0d6efd;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      width: 300px;
+      height: 40px;
+      border-radius: 10px;
+      color: white;
+      
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .book-cover {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .books-title {
+        margin-top: 80px;
+      }
+    }
+
+    .no-cover-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navegação -->
+  <nav class="navbar navbar-expand-xl navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand d-none d-xl-block" href="index.html#home">
+         <img src="./img/logo_math-removebg-preview.png" alt="Logo" height="50">
+      </a>
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="sidebar offcanvas-xl offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header d-xl-none">
+          <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close" id="btn-Fechar"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+            <li class="nav-item"><a class="nav-link" href="index.html#home">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#quem-somos">QUEM SOMOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#acolhimento">ACOLHIMENTO</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#virtual-meeting">ENCONTROS</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1hBciM6hcDnl7QiobvoxwF3YjvklN9U20lKFLBesv_JU/edit#heading=h.64no3funqhyl" target="_blank">MANUAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#devotions">DEVOCIONAIS</a></li>
+            <li class="nav-item"><a class="nav-link" href="livros.html">LIVROS</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#nossos-mestres">MESTRES</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#videos">VIDEOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <h2 class="books-title" data-aos="fade-up">Livros Devocionais</h2>
+    
+    <div class="row">
+      <!-- Vulcão Dourado -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/vulcao dourado-capa.png" alt="Vulcão Dourado" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Vulcão Dourado</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 21,2 MB</p>
+            <p class="book-description">"O Vulcão Dourado do Amor Divino" apresenta os ensinamentos e a vida de Sri Chaitanya Mahaprabhu, A encarnação divina que combinou Krishna e Radharani em uma forma. O livro é dividido em três partes: a primeira narra sua vida, incluindo seu nascimento, pregação e aceitação de sannyasa (renúncia); a segunda explora seus oito preceitos fundamentais sobre devoção, conhecidos como Siksastakam; e a terceira conclui com reflexões sobre a natureza do amor divino. Chaitanya Mahaprabhu é descrito como um distribuidor do amor puro a Krishna, ensinando que a verdadeira devoção inclui humildade, tolerância e sentimento de separação de Deus. O texto explica que a experiência mais elevada está na união com Krishna através da separação.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/vulcaodourado.pdf" download="Vulcão Dourado.pdf" class="btn btn-primary">Download</a>
+              <a href="img/vulcaodourado.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- Vida e Néctar das almas rendidas -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/vida e nectar- capa.png" alt="Vida e Néctar das almas rendidas" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Vida e Néctar das almas rendidas</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 6,3 MB</p>
+            <p class="book-description">Prapanna-jivanãmrtam, ou "Vida e Néctar das Almas Rendidas", é uma obra profunda sobre a rendição ao Senhor Krishna compilada por Srila Bhakti Raksak Sridhar Dev-Goswami Maharaj. O livro explora os seis aspectos da rendição: aceitar o favorável, rejeitar o desfavorável, confiar na proteção divina, aceitar a proteção do Senhor, auto-entrega completa e humildade. Através de citações das escrituras, palavras dos devotos e do próprio Senhor Supremo, a obra estabelece que a rendição incondicional é a única maneira de alcançar a imortalidade positiva e progressiva, culminando no amor divino por Krishna.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Vida e Néctar das almas rendidas.pdf" download="Vida e Néctar das almas rendidas.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Vida e Néctar das almas rendidas.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sri Guru e sua Graça -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/Sri guru e sua graça-capa.png" alt="Sri Guru e sua Graça" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Sri Guru e sua Graça</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 6,2 MB</p>
+            <p class="book-description">"Sri Guru e sua Graça" é uma compilação de conversas com Srila Bhakti Raksak Sridhar Dev-Goswami Maharaj sobre a relação guru-discípulo na tradição Vaishnava Gaudiya. O livro explora o significado espiritual do guru como representante de Krishna, a natureza da iniciação espiritual e a importância da entrega ao mestre espiritual. Aborda a hierarquia espiritual, a sucessão discipular e as diferentes categorias de gurus (iniciadores e instrutores). Enfatiza que o verdadeiro guru não é apenas uma forma física, mas o portador do conhecimento transcendental que conecta o discípulo com a realidade espiritual mais elevada.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Sri Guru e sua Graça.pdf" download="Sri Guru e sua Graça.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Sri Guru e sua Graça.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sri Brabma Sambitã -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/Brahma sanrita-capa.png" alt="Sri Brabma Sambitã" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Sri Brahma Samhitã</h5>
+            <p class="book-author">Sri Chaitanya Saraswath Math</p>
+            <p class="pdf-size">Tamanho: 4,4 MB</p>
+            <p class="book-description">Sri Brahma-Samhitã é um texto sagrado da tradição Vaishnava que contém hinos de louvor a Krishna como a Suprema Personalidade de Deus. O texto descreve Govinda (Krishna) como a realidade suprema, a origem de tudo, cuja forma eterna possui qualidades transcendentais. A obra detalha a morada divina de Krishna, sua relação com as almas individuais, e como diferentes manifestações divinas emanam dele. O texto estabelece a supremacia de Krishna sobre todas as outras manifestações divinas, incluindo Vishnu e Shiva. Sri Chaitanya Mahaprabhu encontrou este texto durante suas viagens e o considerava como a quintessência da filosofia Vaishnava.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Sri Brabma Sambitã.pdf" download="Sri Brahma Sambita.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Sri Brabma Sambitã.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Som Som Som -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/som som som-capa.png" alt="Som Som Som" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Som Som Som</h5>
+            <p class="book-author">Sri Chaitanya Saraswath Math</p>
+            <p class="pdf-size">Tamanho: 563 KB</p>
+            <p class="book-description">O livro "Som Som Som!" de Śrila Bhakti Rakṣaka Śrīdhara Deva-Goswāmī Mahārāj discute o poder do som transcendental na prática espiritual. Ele explora como o som divino é um caminho para se conectar com Deus, explicando que os sentidos físicos não podem perceber o som espiritual diretamente. O texto sugere que através de canais espirituais adequados, particularmente pela orientação de um guru autêntico, o nome divino pode purificar a consciência e transformar a existência ordinária. O livro enfoca o maha-mantra Hare Krishna como um poderoso som espiritual que limpa a mente e desperta a verdadeira natureza da alma.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Som Som Som.pdf" download="Som Som Som.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Som Som Som.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Satisfação Interior -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/satisfação interior-capa.png" alt="Satisfação Interior" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Satisfação Interior</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 1,8 MB</p>
+            <p class="book-description"> Srila B.R. Sridhar Dev-Goswami Maharaj apresenta ensinamentos espirituais da tradição Gaudiya Vaishnava. A obra explora como encontrar verdadeira satisfação através do serviço devocional a Krishna, contrastando a busca material pela felicidade com a experiência espiritual de amor e doçura. O autor argumenta que nossa verdadeira natureza é espiritual, não material, e que devemos direcionar nosso coração para o reino do amor divino, descrito como Vrindavana, nosso verdadeiro lar. Este livro introdutório convida o leitor a embarcar no caminho de volta ao Supremo.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Satisfação Interior.pdf" download="Satisfação Interior.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Satisfação Interior.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Religião do Coração -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/religião do coração-capa.png" alt="Religião do Coração" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Religião do Coração</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 6,1 MB</p>
+            <p class="book-description">O livro "Religião do Coração" apresenta a consciência de Krishna conforme ensinada por Srila Bhakti Sundar Govinda Dev-Goswami Maharaj. A obra explica que Krishna possui quatro qualidades exclusivas: passatempos maravilhosos, associados extraordinários, a melodia transcendental de Sua flauta e beleza incomparável. O texto enfatiza que a adoração mais elevada ocorre através do serviço a Srimati Radharani, e que o caminho espiritual requer orientação de um mestre espiritual autêntico para atingir o amor divino por Krishna em Sua morada suprema, Vrindavana.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Religião do Coração.pdf" download="Religião do Coração.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Religião do Coração.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflexões Douradas -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/reflexoões douradas-capa.png" alt="Reflexões Douradas" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Reflexões Douradas</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 2,8 MB</p>
+            <p class="book-description">"Reflexões Douradas" compila conversas e cartas de Srila Bhakti Sundar Govinda Dev-Goswami Maharaj, fundador da Sri Chaitanya Saraswat Math, publicada em 1999 no Brasil. Detalha a fundação do Math em 1941 por Srila Sridhar Maharaj, seu crescimento e importância espiritual. Inclui um prefácio sobre consciência de Krishna e aborda temas devocionais, como a separação de Krishna, incentivando a devoção pura.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Reflexões Douradas.pdf" download="Reflexões Douradas.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Reflexões Douradas.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- O Pensamento Vaisnava -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/o pensamento vaishnava-capa.png" alt="O Pensamento Vaisnava" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">O Pensamento Vaisnava</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 5,3 MB</p>
+            <p class="book-description">"O Pensamento Vaisnava: Uma Filosofia para a Ioga", de Bhuvana Mohan Das, publicado em 1994, explora conceitos védicos como Brahman, Paramatma e Bhagavan, sob a orientação de Srila Prabhupada e Srila Sridhar Maharaj. O livro detalha a consciência espiritual, a ioga e a criação material, enfatizando a devoção a Krsna como meta suprema. Baseado em escrituras como o Bhagavad-gita e o Srimad-Bhagavatam, reflete a experiência pessoal do autor no vaisnavismo, propondo uma visão multidimensional da realidade e um caminho de autorealização através da graça dos mestres espirituais.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/O Pensamento Vaisnava.pdf" download="O Pensamento Vaisnava.pdf" class="btn btn-primary">Download</a>
+              <a href="img/O Pensamento Vaisnava.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- O Céu Consciente -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/o ceu consciente-capa.png" alt="O Céu Consciente" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">O Céu Consciente</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 2,9 MB</p>
+            <p class="book-description"> Srila Bhakti Raksak Sridhar Dev-Goswami Maharaj, apresenta ensinamentos espirituais da tradição Vaisnava. O texto explica que a consciência é a substância original e que a matéria é apenas uma parte dela. A obra aborda temas como a natureza da devoção, a relação guru-discípulo, e a importância de buscar o serviço amoroso a Krishna. O autor enfatiza que devemos aspirar pela consciência espiritual elevada, deixando para trás os apegos mundanos e as concepções errôneas, para alcançarmos nossa verdadeira identidade espiritual.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/O Céu Consciente.pdf" download="O Céu Consciente.pdf" class="btn btn-primary">Download</a>
+              <a href="img/O Céu Consciente.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evolução Subjetiva -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/evolução subjetiva-capa.png" alt="Evolução Subjetiva" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Evolução Subjetiva</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 5,8 MB</p>
+            <p class="book-description">"Evolução Subjetiva da Consciência" é uma obra de Srila Bhakti Raksak Sridhar Dev-Goswami Maharaj que apresenta uma visão espiritual da evolução, contrapondo-se ao fossilismo materialista. O autor argumenta que a matéria não produz consciência, mas sim o contrário: a consciência é primordial e a matéria é um reflexo desta. A obra explora conceitos como a natureza da realidade como subjetiva, a relação entre a alma individual e o Absoluto, e o caminho devocional como meio de desenvolver a consciência. Os capítulos abordam temas como a hipnose cósmica, o plano do equívoco, experiências flutuantes e a devoção pura, culminando na explicação do significado esotérico do Gayatri Mantra.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Evolução Subjetiva.pdf" download="Evolução Subjetiva.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Evolução Subjetiva.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demolindo os Pilares do Ego -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/demolindo os pilares do ego-capa.png" alt="Demolindo os Pilares do Ego" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Demolindo os Pilares do Ego</h5>
+            <p class="book-author">B.S. Govinda Maharaj</p>
+            <p class="pdf-size">Tamanho: 2,2 MB</p>
+            <p class="book-description">"Demolindo os Pilares do Ego" é um livro de Srila Bhakti Sundar Govinda Dev-Goswami Maharaj, publicado em 1999 pela Sri Chaitanya Saraswat Math. Compila conversas informais com discípulos, abordando consciência de Krishna e a superação do ego. Explora temas como serviço devocional, a importância do Santo Nome e a conexão transcendental com Krishna. Publicado no Brasil pelo Clube do Livro Vaisnava, reflete ensinamentos de grandes mestres como Srila Prabhupada e Srila Sridhar Maharaj. Enfatiza humildade, tolerância e respeito como chaves para a vida espiritual. Visa inspirar buscadores a transcender o mundano rumo ao mundo espiritual.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Demolindo os Pilares do Ego.pdf" download="Demolindo os Pilares do Ego.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Demolindo os Pilares do Ego.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coração e Aura -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/coração e aura-capa.png" alt="Coração e Aura" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Coração e Aura</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 2,3 MB</p>
+            <p class="book-description">"Coração e Aura" é um livro de Srila Bhakti Raksak Sridhar Dev-Goswami Maharaj, publicado em 1999 pela Sri Chaitanya Saraswat Math, compilando conversas informais com discípulos entre 1981 e 1985. Explora temas da consciência de Krishna, como a alma, devoção e superação do ego, enfatizando humildade e amor transcendental. Publicado no Brasil pelo Clube do Livro Vaisnava, reflete ensinamentos de mestres como Srila Prabhupada e Srila Govinda Maharaj. Divide-se em duas partes: "A Alma e o Refúgio Supremo" e "O Caminho Para o Lar". Busca guiar os leitores rumo ao mundo espiritual, transcendendo o mundano. É uma obra essencial para praticantes de bhakti-yoga.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Coração e Aura.pdf" download="Coração e Aura.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Coração e Aura.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bhakti Yoga -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/bhakti yoga-capa.png" alt="Bhakti Yoga" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Bhakti Yoga</h5>
+            <p class="book-author">Sri Chaitanya Saraswath Math</p>
+            <p class="pdf-size">Tamanho: 1,5 MB</p>
+            <p class="book-description">Bhakti Yoga, publicado pelo Sri Chaitanya Saraswat Math, explorando a natureza da alma, sua relação com Deus (Krishna) e o caminho devocional para a liberação. Descreve a alma como eterna, feita de consciência (satchit-ananda), coberta por corpos material e sutil, que podem ser transcendidos pela prática de Bhakti. Apresenta Deus em três aspectos (Brahman, Paramatma, Bhagavan) e cinco tipos de relacionamentos devocionais. Explica a reencarnação, o karma e a importância da vida humana para escapar do ciclo de nascimentos e mortes. Enfatiza o canto do Mahamantra, revelado por Sri Chaitanya, como método principal para despertar a consciência espiritual. Publicado no Brasil, reflete ensinamentos de mestres como Srila Sridhar Maharaj e Srila Govinda Maharaj.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Bhakti Yoga.pdf" download="Bhakti Yoga.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Bhakti Yoga.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Atado pelo Afeto -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/atado pelo afeto-capa.png" alt="Atado pelo Afeto" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Atado pelo Afeto</h5>
+            <p class="book-author">B.S. Govinda Maharaj</p>
+            <p class="pdf-size">Tamanho: 3,5 MB</p>
+            <p class="book-description">"Atado pelo Afeto" é um livro de Srila Bhakti Sundar Govinda Dev-Goswami Maharaj, publicado em 2005 pelo Sri Chaitanya Saraswat Math, que narra sua jornada espiritual desde a infância em Bamunpara até se tornar discípulo de Srila Bhakti Raksak Sridhar Maharaj. Ele descreve como foi atraído pelos santos, abandonou sua vida secular e ingressou no Math em Navadwip, sendo "roubado para Krishna" ás 2h da madrugada. O livro reflete sobre sua iniciação, os desafios enfrentados e o afeto de seu Guru, que o escolheu como sucessor. Aborda temas como humildade, tolerância, devoção e o poder do Harinam Sankirtan para a liberação espiritual. Publicado pelo Clube do Livro Vaishnava, enfatiza a importância da sinceridade, castidade e serviço ao Senhor Krishna. É uma autobiografia espiritual que exalta a eternidade da devoção e a conexão com a consciência de Krishna.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Atado pelo Afeto.pdf" download="Atado pelo Afeto.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Atado pelo Afeto.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- A Busca Por Sri Krishna -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/a busca por sri Krsna-capa.jpg" alt="A Busca Por Sri Krishna" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">A Busca Por Sri Krishna</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 5,9 MB</p>
+            <p class="book-description">O documento é uma edição em português de um livro do Sri Chaitanya Saraswat Math, publicado em 2008, com textos de Srila Bhakti Raksak Sridhar Dev-Goswami Maharaj e outros. Explora temas como consciência de Krishna, amor divino, devoção pura e a busca por Sri Krishna, a Realidade Suprema. Inclui reflexões sobre rasa (prazer espiritual), a importância do Santo Nome e a união de Radha e Krishna em Sri Chaitanya Mahaprabhu. Aborda estágios de devoção, de neutralidade a amor conjugal, com destaque para o serviço de Radharani. Publicado originalmente em inglês em 1983, foi traduzido e revisado por membros do Math no Brasil. O texto enfatiza liberdade, verdade e progresso na consciência de Krishna como meta última da vida.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/A-BUSCA-POR-SRI-KRISHNA.pdf" download="A Busca Por Sri Krishna.pdf" class="btn btn-primary">Download</a>
+              <a href="img/A-BUSCA-POR-SRI-KRISHNA.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- A Busca Amorosa do Servo Perdido -->
+      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/a busca amorosa ao servo perdido-capa.png" alt="A Busca Amorosa do Servo Perdido" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">A Busca Amorosa do Servo Perdido</h5>
+            <p class="book-author">B.R. Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 6,2 MB</p>
+            <p class="book-description">Krishna está ativamente procurando por Suas almas perdidas! Neste livro, Srila Sridhar Maharaj mostra que não somos nós que buscamos a Deus - é Ele quem nos busca com amor. Nossa verdadeira natureza é servir Krishna com amor, e o caminho não está no conhecimento complicado, mas na devoção pura, no canto do santo nome e na rendição. O nível mais elevado desse amor é o serviço a Radharani, algo que Sri Chaitanya Mahaprabhu veio ensinar ao mundo. A mensagem central: Krishna quer levar você de volta para casa!</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/A Busca Amorosa do Servo Perdido.pdf" download="A Busca Amorosa do Servo Perdido.pdf" class="btn btn-primary">Download</a>
+              <a href="img/A Busca Amorosa do Servo Perdido.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+<!--Sri Sri Premadhama deva-stotram-->
+ <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/sri sri premadhana dev stotram-capa.png" alt="Pocket-Kirtan" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Sri Sri Premadhama deva-stotram</h5>
+            <p class="book-author">Sri Chaitanya Saraswath Math</p>
+            <p class="pdf-size">Tamanho: 1,7 MB</p>
+            <p class="book-description">O "Prema Dhama Deva Stotram" é uma obra devocional em sânscrito com tradução em português, publicada em 2008 pelo Sri Chaitanya Saraswat Math, composta por Srila Bhakti Raksak Sridhar Dev-Goswami Maharaj. Composta por 72 versos, exalta Sri Chaitanya Mahaprabhu, descrito como a forma divina de Krishna prema (amor puro), destacando seus passatempos e a distribuição do Santo Nome de Krishna. Explora temas como devoção pura, os humores espirituais de Radha e Krishna, e a supremacia do amor divino. Relata a jornada de Mahaprabhu desde seu nascimento em 1486 até seu desaparecimento em 1534, enfatizando sua missão de libertar as almas através do canto congregacional. Publicado originalmente em inglês em 1983, foi traduzido por Sripad Bhuvana Mohandas no Brasil. O texto culmina com a promessa de que recitá-lo com fé leva ao serviço a Gauranga, a encarnação dourada de Krishna.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Sri Sri Premdhama Deva Stotram.pdf" download="Sri Sri Premdhama Deva Stotram.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Sri Sri Premdhama Deva Stotram.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+   <!--Vida de serviço devocional-->
+<div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/vida e serviço devocional-capa.png" alt="Pocket-Kirtan" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Vida e Serviço Devocional</h5>
+            <p class="book-author">Sri Chaitanya Saraswath Math</p>
+            <p class="pdf-size">Tamanho: 1,7 MB</p>
+            <p class="book-description"> O texto contém instruções detalhadas sobre práticas devocionais, explicações sobre os princípios morais, o canto do Mahamantra Hare Krishna, etiqueta no templo, preparação e consumo de prasadam (alimentos oferecidos), festivais religiosos, e textos fundamentais como o Śrī Śiksāstakam. O manual enfatiza a importância da humildade, tolerância e respeito como base da vida devocional, estabelecendo regras e padrões para os devotos seguirem em seu caminho espiritual.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Vida e Serviço Devocional.pdf" download="Vida e Serviço Devocional.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Vida e Serviço Devocional.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+    <!--Conforto do lar-->
+   <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/conforto do lar -capa.png" alt="Pocket-Kirtan" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Conforto do Lar</h5>
+            <p class="book-author">B.R Sridhar Maharaj</p>
+            <p class="pdf-size">Tamanho: 1,7 MB</p>
+            <p class="book-description">O livro "Conforto do Lar: Uma Introdução à Realização Interior", de Srila Bhakti Rakshak Sridhar Dev-Goswami Maharaj, apresenta uma filosofia espiritual baseada na tradição Vaisnava. A obra explica que existem três planos de vida: o da exploração (mundo material), o da renúncia e o da dedicação (serviço devocional). O autor defende que a verdadeira felicidade está em conectar-se ao Centro (Deus/Krishna), servindo-o com amor, em vez de buscar prazeres temporários ou isolamento espiritual. O livro enfatiza a importância da vida humana para buscar a realização interior e o retorno ao "lar espiritual" através da associação com santos e da devoção.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/Conforto do Lar.pdf" download="img/Conforto do Lar.pdf" class="btn btn-primary">Download</a>
+              <a href="img/Conforto do Lar.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--Kirtan Guide Novo-->
+<div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/kirtan guide novo-capa.png" alt="Pocket-Kirtan" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Kirtan Guide Novo</h5>
+            <p class="book-author">Sri Chaitanya Saraswath Math</p>
+            <p class="pdf-size">Tamanho: 1,7 MB</p>
+            <p class="book-description">O *Kirtan Guide* é um livro contendo cânticos devocionais e orações do movimento Vaishnava, seguindo a tradição de Sri Chaitanya Saraswat Math. Ele inclui seções como invocações (*Vandanā*), orações matinais, cânticos para o meio-dia e à noite, além de hinos dedicados a divindades específicas como Sri Krishna, Sri Chaitanya e os mestres espirituais. Há composições de renomados mestres espirituais, incluindo Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj e Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj. O livro também apresenta um programa diário de cânticos e um índice para facilitar a navegação.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/KirtanGuide7thE  NOVO.pdf" download="KirtanGuide7thE  NOVO.pdf" class="btn btn-primary">Download</a>
+              <a href="img/KirtanGuide7thE  NOVO.pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Pocket-Kirtan -->
+<div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-easing="ease-out-cubic">
+        <div class="card book-card bg-primary border border-4">
+          <div class="book-cover">
+            <img src="img/kirtan-guide capa.jpeg" alt="Pocket-Kirtan" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+          <div class="card-body">
+            <h5 class="book-title">Pocket-Kirtan</h5>
+            <p class="book-author">Sri Chaitanya Saraswath Math</p>
+            <p class="pdf-size">Tamanho: 1,7 MB</p>
+            <p class="book-description">Guia de Kirtan - Edição de Bolso: Uma antologia completa de canções devocionais, especialmente compiladas para o Śrī Chaitanya Sāraswat Maṭh. O livro contém orações, canções e hinos para vários momentos do dia (manhã, tarde e noite) e ocasiões especiais. Inclui canções dedicadas a Krishna, Śrī Gaura, Nitāi, e aos devotos Vaisnavas. Contém instruções para a adoração diária e celebrações de dias sagrados, além de diretrizes sobre como conduzir kirtans. A obra preserva as tradições musicais devocionais da linhagem Gaudiya Vaisnava e serve como manual essencial para praticantes que desejam participar dos cantos devocionais na tradição de Śrī Chaitanya Mahāprabhu.</p>
+            <div class="d-flex justify-content-between">
+              <a href="img/130501-Pocket-Kirtan (1).pdf" download="Pocket-Kirtan.pdf" class="btn btn-primary">Download</a>
+              <a href="img/130501-Pocket-Kirtan%20(1).pdf" target="_blank" class="btn btn-primary">Ver Livro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+    <a href="https://scsmath.org/publications/publications-pdfs.html"><button class="btn-livros">LIVROS EM INGLES</button></a>  
+  </div>
+      
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./jsq/jquery-3.7.1.js"></script>
+  <script src="./js/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+
+</html>
