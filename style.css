@@ -18,7 +18,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 64px;
 }
 
 body {
@@ -46,23 +46,28 @@ ul {
 .custom-navbar {
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
-  padding: 0.5rem 0;
+  padding: 0.15rem 0;
   transition: all 0.3s ease;
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: 32px;
   width: auto;
 }
 
 .nav-link {
   color: var(--light-text) !important;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
-  margin-left: 15px;
+  margin-left: 10px;
   position: relative;
   white-space: nowrap;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 .nav-link::after {
@@ -143,16 +148,37 @@ ul {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img/Home.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   margin-top: 0;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
+  background-image: url('./img/Home.jpeg');
+  background-size: cover;
+  background-position: center;
+  transform: translateY(calc(var(--parallax, 0) * 1px));
+  will-change: transform;
+  z-index: -2;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  z-index: -1;
 }
 
 .logo-hero img {
@@ -240,4 +266,24 @@ footer a {
 
 footer a:hover {
   color: var(--primary-color);
+}
+
+.biography-modal .modal-content {
+  background-color: #fff3cd;
+  border: 1px solid #ffecb5;
+}
+
+@media (max-width: 576px) {
+  .hero-section::before {
+    background-position: 30% 22%;
+  }
+  .hero-section::after {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .hero-section::before {
+    background-position: 38% 28%;
+  }
 }

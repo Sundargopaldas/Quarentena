@@ -149,4 +149,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    const hero = document.querySelector('.hero-section');
+    if (hero) {
+        const factor = window.innerWidth < 576 ? 0.35 : 0.5;
+        const update = () => {
+            const y = window.scrollY - hero.offsetTop;
+            hero.style.setProperty('--parallax', y * factor);
+        };
+        update();
+        if ('IntersectionObserver' in window) {
+            let running = false;
+            const tick = () => {
+                if (!running) return;
+                update();
+                requestAnimationFrame(tick);
+            };
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        running = true;
+                        tick();
+                    } else {
+                        running = false;
+                    }
+                });
+            }, { threshold: 0 });
+            io.observe(hero);
+        } else {
+            let ticking = false;
+            const onScroll = () => {
+                if (!ticking) {
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        update();
+                        ticking = false;
+                    });
+                }
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+        }
+        window.addEventListener('resize', update);
+    }
+
 });
