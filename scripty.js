@@ -90,14 +90,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Handle Trivikrama Image (Converted to Modal)
-    setTimeout(function() {
-        const modalElement = document.getElementById('modalFlyerTrivikrama');
-        if (modalElement) {
-            const modalFlyer = new bootstrap.Modal(modalElement);
+    // Handle Trivikrama Flyer Modal: show only after hero glow animation
+    const modalElement = document.getElementById('modalFlyerTrivikrama');
+    const heroGlow = document.querySelector('.hero-glow');
+
+    if (modalElement && heroGlow) {
+        const modalFlyer = new bootstrap.Modal(modalElement);
+        let shown = false;
+
+        const showFlyer = () => {
+            if (shown) return;
+            shown = true;
             modalFlyer.show();
-        }
-    }, 3000);
+        };
+
+        heroGlow.addEventListener('animationend', () => {
+            setTimeout(showFlyer, 300);
+        }, { once: true });
+    }
 
     // Close mobile menu on click
     const navLinks = document.querySelectorAll(".nav-link");

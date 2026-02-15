@@ -158,16 +158,32 @@ ul {
   margin-top: 0;
 }
 
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 35% 65%, rgba(255, 255, 255, 0.9), transparent 60%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: lotus-glow 6s ease-out 0.5s forwards;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-section::before {
   content: '';
   position: absolute;
-  top: -10vh;
+  top: 0;
   left: 0;
   right: 0;
-  bottom: -10vh;
+  bottom: 0;
   background-image: url('./img/Home.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
   transform: translateY(calc(var(--parallax, 0) * 1px));
   will-change: transform;
   z-index: -2;
@@ -179,6 +195,27 @@ ul {
   inset: 0;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   z-index: -1;
+}
+
+@keyframes lotus-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
 }
 
 .logo-hero img {
@@ -275,7 +312,7 @@ footer a:hover {
 
 @media (max-width: 576px) {
   .hero-section::before {
-    background-position: 30% 22%;
+    background-position: 30% 42%;
   }
   .hero-section::after {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
@@ -284,6 +321,6 @@ footer a:hover {
 
 @media (min-width: 577px) and (max-width: 768px) {
   .hero-section::before {
-    background-position: 38% 28%;
+    background-position: 38% 48%;
   }
 }
