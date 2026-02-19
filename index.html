@@ -16,10 +16,10 @@
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 
-<body class="vh-100">
+<body class="">
 
   <nav class="navbar navbar-expand-xl navbar-dark fixed-top custom-navbar">
       <div class="container">
@@ -464,13 +464,49 @@
 
   <!-- Modal Flyer Trivikrama -->
   <div class="modal fade" id="modalFlyerTrivikrama" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 p-0 justify-content-end bg-transparent">
-          <button type="button" class="btn-close btn-close-white bg-white rounded-circle p-2 opacity-100 shadow position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close" style="z-index: 1056;"></button>
-        </div>
-        <div class="modal-body p-0 text-center">
-          <img src="./img/Post-Trivikrama-100.jpg" class="img-fluid rounded shadow-lg" alt="Convite Trivikrama Maharaj">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 position-relative overflow-hidden">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10; background-color: white; opacity: 0.9; padding: 0.8rem; border-radius: 50%;"></button>
+        <div class="modal-body p-4 p-lg-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5 text-center">
+              <img src="./img/trivikrama.webp"
+                   alt="Srila Trivikrama Maharaj"
+                   class="img-fluid rounded-3 shadow mb-2" style="max-height: 350px; object-fit: cover;">
+              <div class="small text-white-50 mt-2">
+                Srila B. V. Trivikrama Maharaj
+              </div>
+            </div>
+
+            <div class="col-md-7 text-white">
+              <span class="badge bg-warning text-dark mb-3">
+                Encontro on-line mensal
+              </span>
+
+              <h3 class="h4 mb-3 fw-bold font-heading">
+                Encontro on-line com<br>Srila B. V. Trivikrama Maharaj
+              </h3>
+
+              <p class="mb-3 opacity-90">
+                Todo primeiro sábado de cada mês, às 10h da manhã, teremos a ilustre
+                presença de Srila B. V. Trivikrama Maharaj em nossos encontros on-line.
+              </p>
+              <p class="mb-4 opacity-90">
+                Será uma grande alegria receber sua associação e a de nossos irmãos
+                espirituais. Todos são bem-vindos para se juntar a nós nessa transmissão.
+              </p>
+
+              <div class="d-flex flex-wrap gap-3 mb-4 small opacity-75">
+                <span><i class="bi bi-calendar-event me-1"></i>1º sábado do mês</span>
+                <span><i class="bi bi-clock me-1"></i>10h (Brasília)</span>
+                <span><i class="bi bi-wifi me-1"></i>Google Meet</span>
+              </div>
+
+              <a href="https://wa.link/tqfk1p" target="_blank" class="btn btn-light text-primary fw-bold px-4 py-2 shadow-sm w-100 w-md-auto">
+                <i class="bi bi-whatsapp me-2"></i> Quero participar
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -332,3 +332,102 @@ footer a:hover {
     background-position: 38% 48%;
   }
 }
+
+/* Modal Trivikrama Flyer */
+#modalFlyerTrivikrama .modal-content {
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(135deg, #2b1b5a 0%, #4b277d 40%, #8c3f7a 100%) !important;
+  color: #fff !important;
+}
+
+/* Opacity Utilities Fix - Ensure overlays don't block images */
+.opacity-0 { opacity: 0 !important; }
+.opacity-10 { opacity: 0.1 !important; }
+.opacity-25 { opacity: 0.25 !important; }
+.opacity-50 { opacity: 0.5 !important; }
+.opacity-75 { opacity: 0.75 !important; }
+.opacity-100 { opacity: 1 !important; }
+
+#modalFlyerTrivikrama .btn-light {
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#modalFlyerTrivikrama .btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+#modalFlyerTrivikrama .badge {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Modal Close Button Mobile Fix */
+#modalFlyerTrivikrama .btn-close {
+  background-color: white !important;
+  opacity: 0.9 !important;
+  border-radius: 50% !important;
+  padding: 0.8rem !important;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2) !important;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  z-index: 1050;
+}
+
+#modalFlyerTrivikrama .btn-close:hover {
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #modalFlyerTrivikrama .btn-close {
+    top: 10px !important;
+    right: 10px !important;
+    padding: 0.6rem !important; /* Slightly smaller on mobile but still touch friendly */
+  }
+  
+  #modalFlyerTrivikrama .modal-body {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Tablet / iPad Specific Fixes */
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .hero-section {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    background-attachment: scroll; /* Fixes background issues on iOS */
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .hero-content {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 100%;
+  }
+  
+  /* Ensure text doesn't get cut off */
+  .frase-guru .frase1 {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
