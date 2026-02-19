@@ -19,7 +19,12 @@ function typeWriter(elemento, callback) {
 
         function escrever() {
             if (i < textoArray.length) {
-                elemento.innerHTML += textoArray[i];
+                const char = textoArray[i];
+                if (char === '|') {
+                    elemento.innerHTML += '<br>';
+                } else {
+                    elemento.innerHTML += char;
+                }
                 i++;
                 setTimeout(escrever, 70);
             } else {
@@ -75,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         typeWriter(titulo, function() {
             if (guru) {
                 guru.style.opacity = 0;
-                guru.innerHTML = 'S.B.S Govinda Dev Goswami Maharaj';
+                guru.innerHTML = 'Srila B. R. Sridhar Dev Goswami Maharaj';
                 // Simple fade in effect
                 let op = 0.1;
                 let timer = setInterval(function () {

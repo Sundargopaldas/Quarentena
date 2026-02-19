@@ -231,6 +231,10 @@ ul {
   min-height: 120px; /* Prevent layout shift during typing */
 }
 
+.frase-guru .frase1::first-line {
+  font-size: 1.15em;
+}
+
 .nome-guru {
   transition: opacity 1s ease-in-out;
 }
@@ -316,6 +320,10 @@ footer a:hover {
   }
   .hero-section::after {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  }
+  .frase-guru .frase1 {
+    font-size: 1.1rem !important;
+    padding: 0 1rem;
   }
 }
 
