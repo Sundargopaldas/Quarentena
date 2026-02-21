@@ -58,9 +58,9 @@ ul {
 .nav-link {
   color: var(--light-text) !important;
   font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin-left: 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  margin-left: 6px;
   position: relative;
   white-space: nowrap;
 }
@@ -141,7 +141,8 @@ ul {
   }
 
   .navbar-nav {
-    margin: 0 auto; 
+    margin: 0 auto;
+    flex-wrap: nowrap;
   }
 }
 
